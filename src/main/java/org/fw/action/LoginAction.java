@@ -34,6 +34,17 @@ public class LoginAction extends ActionSupport{
         return SUCCESS;
     }
 
+    @Action(value = "login", results = {
+            @Result(name = "success", location = "/index.jsp"),
+            @Result(name = "error", location = "/welcome.jsp")
+    })
+    public String login(){
+        if (userService.login(user) != null)
+            return SUCCESS;
+        else
+            return ERROR;
+    }
+
 
     public User getUser() {
         return user;

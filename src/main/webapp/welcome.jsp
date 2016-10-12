@@ -12,5 +12,10 @@
 </head>
 <body>
 <h1>hello</h1>
+<form action="User/login.action" method="post">
+    <input name="user.username">
+    <input name="user.password" type="password">
+    <input type="submit">
+</form>
 </body>
 </html>
